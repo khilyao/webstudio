@@ -1,0 +1,95 @@
+.clients-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.clients-section__title {
+  @extend %title;
+
+  margin-bottom: 30px;
+}
+
+.clients-section__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clients-section__item {
+  padding: 16px 52px;
+
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+
+  transition: border-color 250ms $cubic-bezier;
+
+  cursor: pointer;
+
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-child(-n + 2)) {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 60px) / 3);
+
+    &:not(:nth-child(-n + 3)) {
+      margin-top: 30px;
+    }
+
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $text-color-accent;
+  }
+}
+
+.clients-section__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.clients-section__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 106px;
+  height: 60px;
+
+  fill: $icon-color;
+
+  transition: fill 250ms $cubic-bezier;
+
+  overflow: visible;
+
+  .clients-section__item:hover & {
+    fill: $text-color-accent;
+  }
+}

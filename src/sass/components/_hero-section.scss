@@ -1,0 +1,44 @@
+.hero-section {
+  margin-left: auto;
+  margin-right: auto;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+    max-width: 1600px;
+  }
+}
+
+.hero-section__container {
+  padding: 118px 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 452px;
+  }
+}
+
+.hero-section__title {
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  color: $bg-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+  }
+}
+
+.hero-section__button {
+  @extend %button;
+}

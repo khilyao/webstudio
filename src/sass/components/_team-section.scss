@@ -1,0 +1,135 @@
+.team-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $bckgr-color;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team-section__title {
+  @extend %title;
+  font-size: 28px;
+
+  margin-bottom: 30px;
+}
+
+.team-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.team-list__item {
+  text-align: center;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:nth-child(-n + 2)) {
+      margin-top: 30px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.team-list__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 0;
+}
+
+.team-list__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+
+  color: $text-color;
+}
+
+.team-list__description {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+
+  color: $text-color-main;
+}
+
+.social-networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-networks__item {
+  width: 44px;
+  height: 44px;
+
+  fill: $icon-color;
+
+  border-radius: 50%;
+
+  transition: background-color 250ms $cubic-bezier;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $text-color-accent;
+  }
+}
+
+.social-networks__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+
+.social-networks__icon {
+  height: 20px;
+  fill: $icon-color;
+
+  transition: fill 250ms $cubic-bezier;
+
+  .social-networks__item:hover & {
+    fill: $bg-color;
+  }
+}

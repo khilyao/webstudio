@@ -10,8 +10,8 @@
   "author": "Khilya Oleksandr <sfwew19@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.60.0"
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel": "^2.9.3"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
